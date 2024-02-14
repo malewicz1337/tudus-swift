@@ -5,15 +5,15 @@
 //  Created by Daniil Malewicz on 2/13/24.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct TudusApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
-        ])
+            Item.self,])
+
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {
