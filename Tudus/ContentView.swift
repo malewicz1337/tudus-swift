@@ -26,6 +26,8 @@ struct ContentView: View {
         }
     }
     
+    // Some comments
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(todo: userInput)
