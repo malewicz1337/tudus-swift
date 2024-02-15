@@ -27,6 +27,7 @@ struct ContentView: View {
     }
     
     // Some comments
+    // More comments
     
     private func addItem() {
         withAnimation {
