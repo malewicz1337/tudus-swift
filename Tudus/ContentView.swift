@@ -13,24 +13,71 @@ struct ContentView: View {
     @State private var userInput = ""
     @State private var items: [Item] = []
     
+    let columns = [GridItem(.adaptive(minimum: 100))]
+//    let columns = [GridItem(.fixed(150))]
+    
+    
     var body: some View {
-        VStack {
-            TextField("Enter item", text: $userInput)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [.cyan, .blue]),
+                           startPoint: .bottomLeading,
+                           endPoint: .topTrailing)
+            .ignoresSafeArea(.all)
+            VStack {
+                TextField("Enter item", text: $userInput)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.blue, lineWidth: 1)
+                    )
+                    .shadow(radius: 3)
+                    .padding(.init(top: 30, leading: 50, bottom: 15, trailing: 50))
+                    .font(.body)
+                    .multilineTextAlignment(.center)
+                
+                Button("Add Item") {
+                    addItem()
+                }
                 .padding()
-            
-            Button("Add Item") {
-                addItem()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .font(.headline)
+                .cornerRadius(10)
+                .shadow(radius: 5)
+                
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 10) {
+                        ForEach(items, id: \.self) { item in
+                            Button(action: {
+                                deleteItem(item)
+                            }) {
+                                Text(item.todo)
+                                    .lineLimit(nil)
+                                    .padding()
+                                    .frame(maxWidth: .infinity, minHeight: 50)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                            }
+                            .padding(5)
+                        }
+                    }
+                }
             }
-            .padding()
         }
     }
     
     private func addItem() {
         withAnimation {
-            let newItem = Item(todo: userInput)
-            modelContext.insert(newItem)
-            items.append(newItem)
+            let trimmedInput = userInput.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            if !trimmedInput.isEmpty {
+                let newItem = Item(todo: trimmedInput)
+                modelContext.insert(newItem)
+                items.append(newItem)
+            }
+            
             userInput = ""
         }
     }
