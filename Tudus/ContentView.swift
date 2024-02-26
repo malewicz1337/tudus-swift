@@ -51,7 +51,6 @@ struct ContentView: View {
                         HStack {
                             Text("Add Item")
 //                                .font(.subheadline)
-                            // SOme more comments mamd
                         }
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding(12)
