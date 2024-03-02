@@ -19,7 +19,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.cyan, .blue]),
+            LinearGradient(gradient: Gradient(colors: [Color("Background"), Color("AccentColor")]),
                            startPoint: .bottomLeading,
                            endPoint: .topTrailing)
                 .ignoresSafeArea(.all)
@@ -34,6 +34,7 @@ struct ContentView: View {
                     TextField("Wine", text: $userInput)
                         .padding()
                         .background(Color.white)
+                        .foregroundStyle(Color("SecondaryText"))
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
@@ -45,22 +46,24 @@ struct ContentView: View {
                         .multilineTextAlignment(.center)
                         .autocorrectionDisabled()
                     
+                    
                     Button(action: {
                         addItem()
                     }) {
                         HStack {
                             Text("Add")
 //                                .font(.subheadline)
+                                .foregroundStyle(Color("MainText"))
                         }
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding(12)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
+                        .background(Color("Background"))
+//                        .foregroundColor(.white)
                         .font(.headline)
                         .cornerRadius(10)
                         .shadow(radius: 3)
                     }
-                    .padding(.init(top: 5, leading: 50, bottom: 15, trailing: 50))
+                    .padding(.init(top: 5, leading: 50, bottom: 5, trailing: 50))
                 }
                 
                 ScrollView {
@@ -72,25 +75,26 @@ struct ContentView: View {
                                 Text(item.todo)
                                     .lineLimit(nil)
                                     .padding()
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(Color("MainText"))
                             }
                             
                             .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
-                            .background(Color.white)
+                            .background(Color("LightBackground"))
                             .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.blue, lineWidth: 1)
-                            )
+//                            .overlay(
+//                                RoundedRectangle(cornerRadius: 10)
+//                                    .stroke(Color.blue, lineWidth: 1)
+//                            )
                             .shadow(radius: 3)
                             }
                             .padding(.init(top: 0, leading: 50, bottom: 0, trailing: 50))
                         }
                     }
                     .animation(.default, value: items)
+                    .padding(.init(top: 4, leading: 0, bottom: 0, trailing: 0))
                 }
                 .scrollIndicators(.hidden)
-                .padding(.bottom, 7)
+                .padding(.init(top: 0, leading: 0, bottom: 7, trailing: 0))
             }
         }
     }
