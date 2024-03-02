@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B470CC12B92B3F60039A31C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B470CC02B92B3F60039A31C /* Launch Screen.storyboard */; };
 		1BA01C112B7C3BCC006079BE /* TudusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA01C102B7C3BCC006079BE /* TudusApp.swift */; };
 		1BA01C132B7C3BCC006079BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA01C122B7C3BCC006079BE /* ContentView.swift */; };
 		1BA01C152B7C3BCC006079BE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA01C142B7C3BCC006079BE /* Item.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B470CC02B92B3F60039A31C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		1BA01C0D2B7C3BCC006079BE /* Tudus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tudus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA01C102B7C3BCC006079BE /* TudusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TudusApp.swift; sourceTree = "<group>"; };
 		1BA01C122B7C3BCC006079BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				1BA01C142B7C3BCC006079BE /* Item.swift */,
 				1BA01C162B7C3BCD006079BE /* Assets.xcassets */,
 				1BA01C182B7C3BCD006079BE /* Preview Content */,
+				1B470CC02B92B3F60039A31C /* Launch Screen.storyboard */,
 			);
 			path = Tudus;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B470CC12B92B3F60039A31C /* Launch Screen.storyboard in Resources */,
 				1BA01C1A2B7C3BCD006079BE /* Preview Assets.xcassets in Resources */,
 				1BA01C172B7C3BCD006079BE /* Assets.xcassets in Resources */,
 			);
@@ -276,7 +280,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tudus/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 59G4997VFW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tudus Shopping Cart";
@@ -284,6 +288,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -291,7 +296,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tudus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.malewicz.Tudus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -307,7 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tudus/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 59G4997VFW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tudus Shopping Cart";
@@ -315,6 +320,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tudus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.malewicz.Tudus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

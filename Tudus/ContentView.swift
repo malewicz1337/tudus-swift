@@ -49,7 +49,7 @@ struct ContentView: View {
                         addItem()
                     }) {
                         HStack {
-                            Text("Add Item")
+                            Text("Add")
 //                                .font(.subheadline)
                         }
                         .frame(minWidth: 0, maxWidth: .infinity)
@@ -87,10 +87,10 @@ struct ContentView: View {
                             .padding(.init(top: 0, leading: 50, bottom: 0, trailing: 50))
                         }
                     }
-                    .scrollIndicators(.hidden)
                     .animation(.default, value: items)
                 }
-                
+                .scrollIndicators(.hidden)
+                .padding(.bottom, 7)
             }
         }
     }
