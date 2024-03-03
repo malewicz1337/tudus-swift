@@ -52,13 +52,11 @@ struct ContentView: View {
                     }) {
                         HStack {
                             Text("Add")
-//                                .font(.subheadline)
                                 .foregroundStyle(Color("MainText"))
                         }
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding(12)
                         .background(Color("Background"))
-//                        .foregroundColor(.white)
                         .font(.headline)
                         .cornerRadius(10)
                         .shadow(radius: 3)
