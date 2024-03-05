@@ -79,10 +79,6 @@ struct ContentView: View {
                             .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
                             .background(Color("LightBackground"))
                             .cornerRadius(10)
-//                            .overlay(
-//                                RoundedRectangle(cornerRadius: 10)
-//                                    .stroke(Color.blue, lineWidth: 1)
-//                            )
                             .shadow(radius: 3)
                             }
                             .padding(.init(top: 0, leading: 50, bottom: 0, trailing: 50))
