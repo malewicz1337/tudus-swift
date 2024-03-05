@@ -33,8 +33,8 @@ struct ContentView: View {
                 VStack {
                     TextField("Wine", text: $userInput)
                         .padding()
-                        .background(Color.white)
-                        .foregroundStyle(Color("SecondaryText"))
+                        .background(.lightBackground)
+                        .foregroundStyle(.secondaryText)
                         .cornerRadius(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
@@ -52,7 +52,7 @@ struct ContentView: View {
                     }) {
                         HStack {
                             Text("Add")
-                                .foregroundStyle(Color("MainText"))
+                                .foregroundStyle(.mainText)
                         }
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding(12)
@@ -73,11 +73,11 @@ struct ContentView: View {
                                 Text(item.todo)
                                     .lineLimit(nil)
                                     .padding()
-                                    .foregroundStyle(Color("MainText"))
+                                    .foregroundStyle(.mainText)
                             }
                             
                             .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
-                            .background(Color("LightBackground"))
+                            .background(.lightBackground)
                             .cornerRadius(10)
                             .shadow(radius: 3)
                             }
